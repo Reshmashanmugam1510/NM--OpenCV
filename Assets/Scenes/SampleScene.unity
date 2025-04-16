@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 39655120}
   - component: {fileID: 39655121}
   - component: {fileID: 39655122}
+  - component: {fileID: 39655123}
   m_Layer: 5
   m_Name: RawImage
   m_TagString: Untagged
@@ -154,10 +155,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1999762669}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 445, y: 445}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &39655121
 CanvasRenderer:
@@ -187,13 +188,27 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 9a89f0244015e104fb922e309d53caf1, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1
     height: 1
+--- !u!114 &39655123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39655119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 3
+  m_AspectRatio: 1
 --- !u!1 &229700656
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,7 +1108,6 @@ GameObject:
   - component: {fileID: 1853254060}
   - component: {fileID: 1853254059}
   - component: {fileID: 1853254058}
-  - component: {fileID: 1853254057}
   - component: {fileID: 1853254056}
   m_Layer: 0
   m_Name: MultiObjectTrackingExample
@@ -1121,43 +1135,6 @@ MonoBehaviour:
   boxHeight: 30
   padding: {x: 8, y: 5}
   consoleHeight: 100
---- !u!114 &1853254057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853254055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e564a549956aebc4d9acef3ff91b0981, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _requestedSource2MatHelperClassName: 0
-  _currentSource2MatHelperClassInterfaces: 1
-  _requestedDeviceName: 
-  _requestedWidth: 640
-  _requestedHeight: 480
-  _requestedIsFrontFacing: 0
-  _requestedFPS: 30
-  _requestedMatUpdateFPS: 30
-  _requestedVideoFilePath: 
-  _loop: 1
-  _requestedImageFilePath: 
-  _repeat: 1
-  _sourceTexture: {fileID: 0}
-  _customClassComponent: {fileID: 0}
-  _outputColorFormat: 3
-  _timeoutFrameCount: 1500
-  _onInitialized:
-    m_PersistentCalls:
-      m_Calls: []
-  _onDisposed:
-    m_PersistentCalls:
-      m_Calls: []
-  _onErrorOccurred:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1853254058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1172,7 +1149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resultPreview: {fileID: 39655122}
   showObjectDetectorResultToggle: {fileID: 1079210757}
-  showObjectDetectorResult: 0
+  showObjectDetectorResult: 1
   trackerByteTrackToggle: {fileID: 927094356}
   trackerByteTrack: 0
   model: yolox_tiny.onnx
@@ -1266,37 +1243,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853254055}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1984055466
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1984055467}
-  m_Layer: 0
-  m_Name: Event System
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1984055467
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1984055466}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1415,7 +1361,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 963194228}
   - {fileID: 705507995}
-  - {fileID: 1984055467}
   - {fileID: 1999762669}
   - {fileID: 1573111069}
   - {fileID: 1853254060}
